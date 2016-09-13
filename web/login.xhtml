@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:metadata>
+        <f:viewAction action="#{userController.loginStatus()}"/>
+    </f:metadata>
+    <h:head>
+        <title>Login</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></link>
+    </h:head>
+    <h:body>
+        <h:form>                           
+                    <div class="col-md-offset-4 col-md-4" style="margin-top:15%;border: 1px solid grey; width: 350px;height: 300px;">
+                        <h1 class="text-primary text-center" style="margin-bottom: 10%">Login</h1>
+                        <div class="row" style="margin-top: 5%;"><span class="col-md-3 text-center">Email:</span><h:inputText class="col-md-8" value="#{userController.user.email}" required="true" label="Email"></h:inputText></div>
+                        <div class="row" style="margin-top: 5%;"><span class="col-md-3 text-center">Password:</span><h:inputSecret class="col-md-8" value="#{userController.user.password}" required="true" label="Password"></h:inputSecret></div>
+                        <div class="row" style="margin-top: 5%;"><h:commandButton class="btn btn-primary" style="margin-left: 80%" value="Login" action="#{userController.login}"></h:commandButton></div>
+                        <p class='text-right text-muted'>I don't have account,click <h:link value="Sign up" outcome="newaccount?faces-redirect=true"></h:link></p>
+                       
+                    </div>  
+            <div class="col-md-3" style="margin-top:15%;">
+                <h:messages style="color: red;"/>
+            </div>
+        </h:form>
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </h:body>
+
+</html>
+
